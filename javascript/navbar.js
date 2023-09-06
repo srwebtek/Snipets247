@@ -5,6 +5,7 @@
 const siteName = "SNIPPETS:<span>247</span>";
 
 document.getElementById("top__nav__logo").innerHTML = siteName;
+document.getElementById("top__nav__logo").setAttribute("href", "../../index.html");
 
 
 
@@ -40,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //  ----------------------------------
 
 function populateDropdownMenu() {
-  fetch("../json/pages.json")
+  fetch("../../json/pages.json")
     .then((response) => response.json())
     .then((data) => {
       const dropdownMenu = document.getElementById("dropdown-menu");
@@ -74,7 +75,7 @@ populateDropdownMenu();
 //  ----------------------------------
 
 function populateHorizontalMenu() {
-  fetch("../json/pages.json")
+  fetch("../../json/pages.json")
     .then((response) => response.json())
     .then((data) => {
       const horizontalMenu = document.querySelector(".horizontal");
@@ -106,7 +107,7 @@ populateHorizontalMenu();
 //  ----------------------------------
 
 function populateAsideMenu() {
-  fetch("../json/pages.json") // Update the path to your JSON file
+  fetch("../../json/pages.json") // Update the path to your JSON file
     .then((response) => response.json())
     .then((data) => {
       const asideMenu = document.querySelector(".left__nav ul");

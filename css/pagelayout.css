@@ -24,3 +24,7 @@ article {
   background-color: var(--color-light-white);
 }
 
+article .container{
+  padding: 7rem 2rem 2rem 2rem;
+}
+
