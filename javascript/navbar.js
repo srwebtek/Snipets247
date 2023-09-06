@@ -5,9 +5,9 @@
 const siteName = "SNIPPETS:<span>247</span>";
 
 document.getElementById("top__nav__logo").innerHTML = siteName;
-document.getElementById("top__nav__logo").setAttribute("href", "../../index.html");
-
-
+document
+  .getElementById("top__nav__logo")
+  .setAttribute("href", "../index.html");
 
 //  -------------------------
 //    display dropdown menu
@@ -40,8 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
 //    dropdown menu from json file
 //  ----------------------------------
 
+// Function to fetch and populate the dropdown menu with nested menus and items
 function populateDropdownMenu() {
-  fetch("../../json/pages.json")
+  fetch("../json/pages.json")
     .then((response) => response.json())
     .then((data) => {
       const dropdownMenu = document.getElementById("dropdown-menu");
@@ -49,10 +50,25 @@ function populateDropdownMenu() {
 
       data.topics.forEach((topic) => {
         const li = document.createElement("li");
-        const a = document.createElement("a");
-        a.href = topic.url;
-        a.textContent = topic.title;
-        li.appendChild(a);
+        const h2 = document.createElement("h2");
+        h2.textContent = topic.title;
+        li.appendChild(h2);
+
+        if (topic.pages && topic.pages.length > 0) {
+          const submenuUl = document.createElement("ul");
+
+          topic.pages.forEach((page) => {
+            const submenuLi = document.createElement("li");
+            const submenuA = document.createElement("a");
+            submenuA.href = page.url;
+            submenuA.textContent = page.title;
+            submenuLi.appendChild(submenuA);
+            submenuUl.appendChild(submenuLi);
+          });
+
+          li.appendChild(submenuUl);
+        }
+
         ul.appendChild(li);
       });
     })
@@ -61,42 +77,8 @@ function populateDropdownMenu() {
     });
 }
 
+// Call the function to populate the dropdown menu with nested menus and items
 populateDropdownMenu();
-
-
-
-
-
-
-
-//  ----------------------------------
-//    NAVBAR - insert nav info from
-//    json file into the upper navbar
-//  ----------------------------------
-
-function populateHorizontalMenu() {
-  fetch("../../json/pages.json")
-    .then((response) => response.json())
-    .then((data) => {
-      const horizontalMenu = document.querySelector(".horizontal");
-
-      data.topics.forEach((topic) => {
-        const li = document.createElement("li");
-        const a = document.createElement("a");
-        a.href = topic.url; 
-        a.textContent = topic.title;
-        li.appendChild(a);
-        horizontalMenu.appendChild(li);
-      });
-    })
-    .catch((error) => {
-      console.error("Error fetching JSON:", error);
-    });
-}
-
-populateHorizontalMenu();
-
-
 
 
 
@@ -106,18 +88,31 @@ populateHorizontalMenu();
 //    navbar <aside>
 //  ----------------------------------
 
-function populateAsideMenu() {
-  fetch("../../json/pages.json") // Update the path to your JSON file
+function populateNestedMenu() {
+  fetch("../json/pages.json")
     .then((response) => response.json())
     .then((data) => {
       const asideMenu = document.querySelector(".left__nav ul");
 
       data.topics.forEach((topic) => {
         const li = document.createElement("li");
-        const a = document.createElement("a");
-        a.href = topic.url; // Use the URL from the JSON data
-        a.textContent = topic.title;
-        li.appendChild(a);
+        const h2 = document.createElement("h2");
+        h2.textContent = topic.title;
+        li.appendChild(h2);
+
+        if (topic.pages && topic.pages.length > 0) {
+          const submenuUl = document.createElement("ul");
+          topic.pages.forEach((page) => {
+            const submenuLi = document.createElement("li");
+            const submenuA = document.createElement("a");
+            submenuA.href = page.url;
+            submenuA.textContent = page.title;
+            submenuLi.appendChild(submenuA);
+            submenuUl.appendChild(submenuLi);
+          });
+          li.appendChild(submenuUl);
+        }
+
         asideMenu.appendChild(li);
       });
     })
@@ -126,5 +121,4 @@ function populateAsideMenu() {
     });
 }
 
-
-populateAsideMenu();
+populateNestedMenu();
