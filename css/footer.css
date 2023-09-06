@@ -1,0 +1,10 @@
+footer{
+    width: 100vw;
+    height: 10rem;
+    background-color: var(--color-light-black);
+}
+footer .wrapper {
+    height: 100%;
+    max-width: var(--width-footer-max);
+    margin: auto;
+}

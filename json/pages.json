@@ -1,0 +1,46 @@
+{
+  "topics": [
+    {
+      "title": "Topic 1",
+      "url": "https://example.com/topic-1",
+      "pages": [
+        {
+          "title": "Nested Item 1.1",
+          "url": "https://example.com/nested-item-1-1"
+        },
+        {
+          "title": "Nested Item 1.2",
+          "url": "https://example.com/nested-item-1-2"
+        }
+      ]
+    },
+    {
+      "title": "Topic 2",
+      "url": "https://example.com/topic-2",
+      "pages": [
+        {
+          "title": "Nested Item 2.1",
+          "url": "https://example.com/nested-item-2-1"
+        },
+        {
+          "title": "Nested Item 2.2",
+          "url": "https://example.com/nested-item-2-2"
+        }
+      ]
+    },
+    {
+      "title": "Topic 3",
+      "url": "https://example.com/topic-3",
+      "pages": [
+        {
+          "title": "Nested Item 3.1",
+          "url": "https://example.com/nested-item-3-1"
+        },
+        {
+          "title": "Nested Item 3.2",
+          "url": "https://example.com/nested-item-3-2"
+        }
+      ]
+    }
+  ]
+}

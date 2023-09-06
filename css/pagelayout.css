@@ -1,0 +1,26 @@
+main {
+  margin: auto;
+  max-width: var(--width-maximum-content);
+  display: grid;
+  grid-template-columns: var(--width-sidebar-left) 1fr var(
+      --width-sidebar-right
+    );
+}
+.top__nav #hamburger {
+  display: none;
+}
+
+.left__sidebar {
+  height: 200vh;
+}
+
+.right__sidebar {
+  min-height: 200vh;
+  background-color: var(--color-E);
+}
+
+article {
+  min-height: 300vh;
+  background-color: var(--color-light-white);
+}
+
