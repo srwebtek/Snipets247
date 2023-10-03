@@ -1,20 +1,31 @@
 # SNIPPETS247.com
+---
+---
+---
+---
+---
+# _Learning opportunity:_
+## _Undoubtedly, this project has been a remarkable avenue for expanding my programming knowledge and skill set, providing an enriching learning experience that allowed me to delve into advanced programming techniques and gain a deeper understanding of web development. Regrettably, upon conducting a comprehensive review, it is clear that the site's level of technical complexity may not align with its intended purpose. This realisation has prompted me to contemplate a new direction for the project, one that embraces a more straightforward and user-friendly approach. Furthermore, I intend to reduce the site's reliance on JavaScript for functionality, ensuring that users with JavaScript-disabled browsers can access the content seamlessly._
 
-
+---
+---
+---
+---
+---
 
 __AUTHOR:__ srwebtek.
 
 __COPYRIGHT:__ srwebtek © 2023.
 
-__DEPLOYED:__ Nil
+__DEPLOYED:__ No
 
-__WEBSITE URL:__ https://www.snippets247.com
+__WEBSITE URL:__ No
 
 __VERSION:__ v1.0
 
 __INITIALISED:__ 02SEP23
 
-__UPDATED:__ 06SEP23
+__UPDATED:__ 03OCT23
 
 ---
 
