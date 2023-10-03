@@ -28,31 +28,8 @@
   margin: 1rem;
   font-family: tekturBold;
 }
-.top__nav .logo span{
+.top__nav .logo span {
   color: var(--color-E);
-}
-
-/* ------------------ */
-/*   horizontal menu  */
-/* ------------------ */
-
-.top__nav .horizontal {
-  display: flex;
-  height: 100%;
-  margin-right: 2rem;
-}
-.top__nav .horizontal li {
-  list-style: none;
-}
-.top__nav .horizontal a {
-  color: white;
-  padding: 1rem;
-  font-size: 1.2rem;
-  font-family: tektur;
-}
-.top__nav .horizontal a:hover {
-  background-color: var(--color-E);
-  color: var(--color-light-black);
 }
 
 /* ------------------ */
@@ -92,7 +69,7 @@
   right: 0;
   padding: 1rem;
 }
-.top__nav #dropdown-menu h2{
+.top__nav #dropdown-menu h2 {
   color: var(--color-E);
   font-family: tektur;
   font-size: 1.5rem;
@@ -133,12 +110,12 @@
   top: 2.4rem;
   background-color: var(--color-light-black);
   padding: 2rem 1rem 1rem 1rem;
-  overflow-y: auto; 
+  overflow-y: auto;
 }
 .left__nav li {
   list-style: none;
 }
-.left__nav h2{
+.left__nav h2 {
   color: var(--color-E);
   font-family: tektur;
   font-size: 1.5rem;

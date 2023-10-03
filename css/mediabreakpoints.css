@@ -16,7 +16,4 @@
   .top__nav #hamburger {
     display: flex;
   }
-  .top__nav .horizontal {
-    display: none;
-  }
 }

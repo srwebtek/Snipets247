@@ -10,42 +10,22 @@
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/mediabreakpoints.css" />
     <script src="javascript/navbar.js" defer></script>
+    <script src="loadContentIntoElement.js"></script>
   </head>
-  <script src="zz_TEST_Import.js" defer></script>
-  <body>
-    <nav class="top__nav">
-      <div class="content">
-        <a href="#" class="logo" id="top__nav__logo">Logo</a>
-        <ul class="horizontal"></ul>
-      </div>
-      <div class="dropdown-container">
-        <div id="hamburger">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-        <div id="dropdown-menu">
-          <ul></ul>
-        </div>
-      </div>
-    </nav>
 
+  <body>
+    <div id="insertNavHere"></div>
     <main>
-      <aside class="left__sidebar">
-        <nav class="left__nav">
-          <ul>
-          </ul>
-        </nav>
-      </aside>
+      <div id="insertLeftSideBarHere"></div>
       <article class="demo__mode">
         <div class="container">
-          <p id="importText" data-id="importText" data-path="/ImportMe.txt">text here</p>
-
-          
-
+          <p id="importPageContent">This is the first entry</p>
+          <script>
+            loadContentIntoElement("importPageContent", "/ImportMe.txt");
+          </script>
         </div>
       </article>
-      <aside class="right__sidebar"></aside>
+      <div id="insertRightSideBarHere"></div>
     </main>
     <footer>
       <div class="wrapper"></div>

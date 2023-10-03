@@ -1,13 +1,49 @@
-//  -------------------------
-//    insert the site name
-//  -------------------------
-
+//  ---------------------------
+//    insert main navigation
+//  ---------------------------
 const siteName = "SNIPPETS:<span>247</span>";
+const siteNameURL = "#";
+const insertNav = `
+<nav class="top__nav">
+  <div class="content">
+    <a href="${siteNameURL}" class="logo">${siteName}</a>
+  </div>
+  <div class="dropdown-container">
+    <div id="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <div id="dropdown-menu">
+      <ul></ul>
+    </div>
+  </div>
+</nav>
+`;
+document.getElementById("insertNavHere").innerHTML = insertNav;
+console.log("SUCCESS: Main Menu Inserted");
 
-document.getElementById("top__nav__logo").innerHTML = siteName;
-document
-  .getElementById("top__nav__logo")
-  .setAttribute("href", "../index.html");
+//  ---------------------------
+//    insert left-side-bar
+//  ---------------------------
+const insertLeftSideBar = `
+<aside class="left__sidebar">
+  <nav class="left__nav">
+    <ul></ul>
+  </nav>
+</aside>
+`;
+document.getElementById("insertLeftSideBarHere").innerHTML = insertLeftSideBar;
+console.log("SUCCESS: Left Side Bar Inserted");
+
+//  ---------------------------
+//    insert right-side-bar
+//  ---------------------------
+const insertRightSideBar = `
+<aside class="right__sidebar"></aside>
+`;
+document.getElementById("insertRightSideBarHere").innerHTML = insertRightSideBar;
+console.log("SUCCESS: Right Side Bar Inserted");
 
 //  -------------------------
 //    display dropdown menu
@@ -18,11 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const dropdownContainer = document.querySelector(".dropdown-container");
 
   hamburgerMenu.addEventListener("click", function () {
-    console.log("clicked: Hamburger");
     if (dropdownMenu.style.display === "flex") {
       dropdownMenu.style.display = "none";
+      console.log("CLICKED: Menu Closed");
     } else {
       dropdownMenu.style.display = "flex";
+      console.log("CLICKED: Menu Opened");
     }
   });
   document.addEventListener("click", function (event) {
@@ -31,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
       dropdownMenu.style.display === "flex"
     ) {
       dropdownMenu.style.display = "none";
+      console.log("CLICKED: Menu Closed");
     }
   });
 });
@@ -79,8 +117,6 @@ function populateDropdownMenu() {
 
 // Call the function to populate the dropdown menu with nested menus and items
 populateDropdownMenu();
-
-
 
 //  ----------------------------------
 //    NAVBAR - insert nav info from
